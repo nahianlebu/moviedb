@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card bg-base-100 shadow-md rounded-2xl max-w-md mx-auto mt-8">
+  <form method="post" class="card-body gap-3">
+    <h2 class="card-title mb-2">Add Movie</h2>
+    <input name="title"    required placeholder="Title"    class="input input-bordered w-full">
+    <input name="genre"    required placeholder="Genre"    class="input input-bordered w-full">
+    <input name="director" required placeholder="Director" class="input input-bordered w-full">
+    <input name="year" type="number" min="1900" max="2026" required
+           placeholder="Release Year" class="input input-bordered w-full">
+    <button class="btn btn-accent mt-2">Save</button>
+  </form>
+</div>
+{% endblock %}

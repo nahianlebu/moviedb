@@ -1,0 +1,29 @@
+{% extends "base.html" %} {% block content %}
+<h2 class="text-2xl font-bold my-4">🏆 Top Rated</h2>
+<div class="card bg-base-100 shadow-md rounded-2xl overflow-x-auto">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Title</th>
+        <th>Genre</th>
+        <th>Votes</th>
+        <th>Avg Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for r in rows %}
+      <tr>
+        <td>{{ loop.index }}</td>
+        <td>
+          <a class="link link-hover" href="/movie/{{ r.movieID }}">{{ r.title }}</a>
+        </td>
+        <td><span class="badge badge-accent">{{ r.genre }}</span></td>
+        <td>{{ r.votes }}</td>
+        <td>★ {{ r.avg_rating }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}
