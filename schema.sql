@@ -37,3 +37,14 @@ SELECT m.movieID, m.title, m.genre,
 FROM movies m JOIN ratings r ON m.movieID = r.movieID
 GROUP BY m.movieID, m.title, m.genre
 ORDER BY avg_rating DESC;
+
+INSERT INTO movies (title, genre, director, releaseYear) VALUES
+('Inception','Sci-Fi','Christopher Nolan',2010),
+('The Dark Knight','Action','Christopher Nolan',2008),
+('Interstellar','Sci-Fi','Christopher Nolan',2014),
+('The Shawshank Redemption','Drama','Frank Darabont',1994),
+('Spirited Away','Animation','Hayao Miyazaki',2001);
+
+INSERT INTO ratings (movieID, story, acting, visual, sound, direction) VALUES
+(1,9,8,9,8,9),(1,8,8,9,8,9),(2,10,9,9,9,10),
+(3,9,8,10,9,9),(4,10,9,8,8,10),(5,9,8,10,9,9);
